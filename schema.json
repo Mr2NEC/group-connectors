@@ -1,0 +1,26 @@
+{
+  "dataset": {
+    "title": "QuantumTech ecosystem",
+    "entity_noun": "organisation"
+  },
+  "entities": {
+    "file": "data/organizations.csv",
+    "id": "org_id",
+    "label": "name",
+    "type": "org_type",
+    "profile_fields": ["country", "subsector"],
+    "missing_values": ["", "n/a"]
+  },
+  "relationships": {
+    "file": "data/relationships.csv",
+    "source": "source_id",
+    "target": "target_id",
+    "type": "rel_type",
+    "direction": "direction",
+    "year": "year",
+    "weight": "weight"
+  },
+  "views": [
+    { "id": "no_investments", "label": "Ignore investments", "exclude_types": ["invested_in"] }
+  ]
+}

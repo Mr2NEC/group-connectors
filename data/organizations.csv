@@ -1,0 +1,194 @@
+org_id,name,country,city,founded_year,org_type,subsector,employee_band,funding_stage
+ORG-0001,Supernova Invest,,,,investor,services,11-50,n/a
+ORG-0002,DARPA,United States,Arlington,1958,government_body,services,201-500,n/a
+ORG-0003,IQM Quantum Computers,Finland,Espoo,2018,company,hardware,201-500,series_b
+ORG-0004,Qunnect,United States,New York,2017,company,networking,11-50,series_a
+ORG-0005,BlueQubit,United States,San Francisco,2022,company,software,1-10,seed
+ORG-0006,QuEra Computing,United States,Boston,2018,company,hardware,51-200,series_b
+ORG-0007,Kuano,United Kingdom,Cambridge,2020,company,software,11-50,seed
+ORG-0008,France 2030,,,,government_body,services,1000+,n/a
+ORG-0009,Tesi,Finland,Helsinki,1995,investor,services,11-50,n/a
+ORG-0010,Intel Ignite,United States,Santa Clara,2019,investor,services,11-50,n/a
+ORG-0011,MagiQ Technologies,United States,Somerville,1999,company,networking,11-50,series_a
+ORG-0012,Mesa Quantum,United States,Boulder,2022,company,sensing,11-50,series_a
+ORG-0013,NXP Semiconductors,Netherlands,Eindhoven,1953,company,hardware,201-500,public
+ORG-0014,Paladin Capital Group,United States,Washington,2001,investor,services,11-50,n/a
+ORG-0015,Bessemer Venture Partners,United States,San Francisco,1911,investor,services,11-50,n/a
+ORG-0016,OrbiMed,United States,New York,1989,investor,services,51-200,n/a
+ORG-0017,Riverlane,United Kingdom,Cambridge,2016,company,software,51-200,series_c
+ORG-0018,UNSW Sydney,Australia,Sydney,1949,research_institute,hardware,1000+,n/a
+ORG-0019,Crypta Labs,United Kingdom,London,2014,company,networking,1-10,seed
+ORG-0020,Andreessen Horowitz,United States,Menlo Park,2009,investor,services,201-500,n/a
+ORG-0021,Archer Materials,Australia,Unley,2007,company,materials,11-50,public
+ORG-0022,D-Wave Systems,Canada,Burnaby,1999,company,hardware,201-500,public
+ORG-0023,Bpifrance,France,Maisons-alfort,2012,investor,services,1000+,n/a
+ORG-0024,NVentures,,,,investor,services,1-10,n/a
+ORG-0025,BlackRock,United States,New York,1988,investor,services,1000+,n/a
+ORG-0026,Hamamatsu Photonics,Japan,Hamamatsu,1953,company,sensing,1000+,public
+ORG-0027,Nord Quantique,Canada,Sherbrooke,2020,company,hardware,11-50,seed
+ORG-0028,QuSecure,,,,company,software,11-50,series_a
+ORG-0029,Nokia,Finland,Espoo,1865,company,networking,1000+,public
+ORG-0030,National Research Foundation Singapore,Singapore,Singapore,2006,government_body,services,201-500,n/a
+ORG-0031,Sumitomo,Japan,Tokyo,1919,investor,services,1000+,n/a
+ORG-0032,VTT Technical Research Centre,Finland,Espoo,1942,research_institute,materials,1000+,n/a
+ORG-0033,Wellcome Leap,,,,investor,services,11-50,n/a
+ORG-0034,Quantum Flagship,Belgium,Brussels,2018,consortium,services,11-50,n/a
+ORG-0035,LuxQuanta,Spain,Barcelona,2021,company,networking,11-50,series_a
+ORG-0036,Polaris Quantum Biotech,Canada,Toronto,2020,company,software,1-10,seed
+ORG-0037,Infleqtion,United States,Louisville,2007,company,hardware,51-200,public
+ORG-0038,QuantWare,,,,company,hardware,11-50,seed
+ORG-0039,QC Ware,United States,Palo Alto,2014,company,software,51-200,series_b
+ORG-0040,Quantum Brilliance,Australia,Canberra,2019,company,hardware,51-200,seed
+ORG-0041,Algorithmiq,,,,company,software,11-50,series_a
+ORG-0042,XtalPi,China,Shenzhen,2015,company,software,501-1000,public
+ORG-0043,Infineon Technologies,Germany,Neubiberg,1999,company,hardware,1000+,public
+ORG-0044,360 Capital,France,Paris,1997,investor,services,11-50,n/a
+ORG-0045,BREEGA,,,,investor,services,11-50,n/a
+ORG-0046,QSimulate,United States,Cambridge,2018,company,software,11-50,seed
+ORG-0047,Qunova Computing,South Korea,Daejeon,2022,company,software,1-10,series_a
+ORG-0048,C12,France,Paris,2020,company,hardware,11-50,series_a
+ORG-0049,Nanofiber Quantum Technologies,Japan,Tokyo,2022,company,hardware,1-10,series_a
+ORG-0050,Maverick Ventures,United States,San Francisco,2015,investor,services,11-50,n/a
+ORG-0051,University of Oxford,United Kingdom,Oxford,1096,research_institute,hardware,1000+,n/a
+ORG-0052,C12 Quantum Electronics,France,Paris,2020,company,hardware,51-200,seed
+ORG-0053,PharmCADD,South Korea,Busan,2019,company,software,51-200,series_b
+ORG-0054,Haiqu,United States,Stanford,2022,company,software,11-50,seed
+ORG-0055,Quobly,France,Grenoble,2022,company,hardware,51-200,seed
+ORG-0056,Nu Quantum,United Kingdom,Cambridge,2018,company,networking,11-50,series_a
+ORG-0057,Centre for Quantum Technologies (NUS),Singapore,Singapore,2007,research_institute,networking,201-500,n/a
+ORG-0058,Evolution Equity Partners,United States,New York,2008,investor,services,11-50,n/a
+ORG-0059,Australian Government,,,,government_body,services,1000+,n/a
+ORG-0060,RIKEN,Japan,Wako,1917,research_institute,hardware,1000+,n/a
+ORG-0061,Twinleaf LLC,United States,Plainsboro,2007,company,sensing,1-10,series_a
+ORG-0062,Toshiba,Japan,Tokyo,1875,company,networking,1-10,public
+ORG-0063,Thales Group,France,Paris,1893,company,services,1-10,public
+ORG-0064,AUREA Technology,France,Besançon,2010,company,sensing,11-50,seed
+ORG-0065,Diraq,Australia,Sydney,2022,company,hardware,11-50,series_a
+ORG-0066,Q-CTRL,,,,company,software,51-200,series_b
+ORG-0067,SandboxAQ,United States,Palo Alto,2016,company,software,51-200,series_c
+ORG-0068,SBQuantum,Canada,Sherbrooke,2017,company,sensing,11-50,seed
+ORG-0069,Planet First Partners,Luxembourg,Luxembourg,2021,investor,services,11-50,n/a
+ORG-0070,National Science Foundation,United States,Alexandria,1950,government_body,services,1000+,n/a
+ORG-0071,Tiger Global Management,United States,New York,2001,investor,services,201-500,n/a
+ORG-0072,QuantumCTek,China,Hefei,2009,company,networking,1000+,public
+ORG-0073,Qubit Pharmaceuticals,France,Paris,2020,company,software,51-200,seed
+ORG-0074,Quside Technologies,,,,company,hardware,11-50,series_a
+ORG-0075,Government of Canada,Canada,Ottawa,1867,government_body,services,1000+,n/a
+ORG-0076,Phasecraft,United Kingdom,London,2018,company,software,11-50,series_b
+ORG-0077,Rigetti Computing,United States,Berkeley,2013,company,hardware,51-200,public
+ORG-0078,Fujitsu,,,,company,hardware,1000+,public
+ORG-0079,Pasqal,France,Palaiseau,2019,company,hardware,201-500,series_b
+ORG-0080,Cathay Innovation,France,Paris,2015,investor,services,11-50,n/a
+ORG-0081,evolutionQ,Canada,Waterloo,2015,company,software,51-200,series_a
+ORG-0082,Ciena,United States,Hanover,1992,company,networking,1000+,public
+ORG-0083,AQEMIA,France,Paris,2019,company,software,51-200,series_a
+ORG-0084,Quantum Computing Inc.,United States,Hoboken,2018,company,hardware,51-200,public
+ORG-0085,QuintessenceLabs,,,,company,networking,11-50,series_b
+ORG-0086,Quantum Machines,Israel,Tel Aviv,2018,company,hardware,201-500,series_c
+ORG-0087,Qnami AG,Switzerland,Muttenz,2017,company,sensing,11-50,seed
+ORG-0088,Mitsubishi Electric,Japan,Tokyo,1921,company,networking,1000+,public
+ORG-0089,Main Sequence Ventures,Australia,Sydney,2017,investor,services,11-50,n/a
+ORG-0090,US Department of Energy,United States,Washington,1977,government_body,services,1000+,n/a
+ORG-0091,QNu Labs,India,Bengaluru,2016,company,networking,51-200,series_a
+ORG-0092,Alice & Bob,France,Paris,2020,company,hardware,51-200,series_b
+ORG-0093,Atom Computing,United States,Berkeley,2018,company,hardware,51-200,series_b
+ORG-0094,HQS Quantum Simulations,Germany,Karlsruhe,2017,company,software,11-50,seed
+ORG-0095,SK Telecom,South Korea,Seoul,1984,company,networking,1000+,public
+ORG-0096,Accenture,Ireland,Dublin,1989,investor,services,1000+,n/a
+ORG-0097,1QBit,Canada,Vancouver,2012,company,software,51-200,series_b
+ORG-0098,Bullhound Capital,Luxembourg,Luxembourg,2008,investor,services,11-50,n/a
+ORG-0099,Microsoft,United States,Redmond,1975,investor,services,1000+,n/a
+ORG-0100,5Y Capital,,,,investor,services,11-50,n/a
+ORG-0101,Zapata AI,,,,company,software,11-50,public
+ORG-0102,NIST,United States,Gaithersburg,1901,research_institute,sensing,1000+,n/a
+ORG-0103,NuCrypt,United States,Evanston,2003,company,networking,1-10,seed
+ORG-0104,SpinQ,China,Shenzhen,2018,company,hardware,51-200,series_a
+ORG-0105,Allianz,Germany,Munich,1890,investor,services,1000+,n/a
+ORG-0106,Horizon Quantum,Singapore,Singapore,2018,company,software,11-50,public
+ORG-0107,PQShield,United Kingdom,Oxford,2018,company,software,501-1000,series_b
+ORG-0108,KAIST,,,,research_institute,hardware,1000+,n/a
+ORG-0109,Muquans,France,Talence,2011,company,sensing,11-50,series_a
+ORG-0110,Quantum Source,Israel,Ness Ziona,2021,company,hardware,51-200,series_a
+ORG-0111,Alumni Ventures,United States,Manchester,2014,investor,services,51-200,n/a
+ORG-0112,IBM,,,,company,hardware,1000+,public
+ORG-0113,D-Wave Quantum,United States,Palo Alto,1999,company,hardware,51-200,public
+ORG-0114,Y Combinator,United States,Mountain View,2005,investor,services,51-200,n/a
+ORG-0115,QDI systems,,,,company,materials,11-50,series_a
+ORG-0116,Amadeus Capital Partners,United Kingdom,Cambridge,1997,investor,services,51-200,n/a
+ORG-0117,European Investment Bank,Luxembourg,Luxembourg,1958,investor,services,1000+,n/a
+ORG-0118,QED-C,United States,Arlington,2018,consortium,services,11-50,n/a
+ORG-0119,Inovia Capital,Canada,Montréal,2007,investor,services,51-200,n/a
+ORG-0120,Taiwan Semiconductor Manufacturing Company (TSMC),Taiwan,Hsinchu,1987,company,materials,1000+,public
+ORG-0121,Airbus Ventures,United States,Menlo Park,2015,investor,services,11-50,n/a
+ORG-0122,QD Laser,Japan,Kawasaki,2021,company,materials,51-200,public
+ORG-0123,Kvantify,Denmark,Copenhagen,2022,company,software,51-200,seed
+ORG-0124,SEALSQ,Switzerland,Geneva,2022,company,hardware,51-200,public
+ORG-0125,Heights Capital Management,,,,investor,services,1-10,n/a
+ORG-0126,UbiQD,United States,Los Alamos,2014,company,materials,11-50,series_a
+ORG-0127,Classiq,Israel,Tel Aviv,2020,company,software,51-200,series_c
+ORG-0128,ID Quantique,Switzerland,Geneva,2001,company,networking,51-200,seed
+ORG-0129,Quantum Solutions,United Kingdom,Southampton,2016,company,materials,11-50,series_a
+ORG-0130,Terra Quantum,Switzerland,St. Gallen,2019,company,software,51-200,series_a
+ORG-0131,Micro-X Ltd,Australia,Adelaide,2011,company,sensing,51-200,public
+ORG-0132,Photonic,Canada,Vancouver,2016,company,hardware,11-50,seed
+ORG-0133,QunaSys,Japan,Tokyo,2018,company,software,11-50,series_b
+ORG-0134,Atomionics,Singapore,Singapore,2018,company,sensing,11-50,seed
+ORG-0135,SoftBank Vision Fund,United Kingdom,London,1990,investor,services,201-500,n/a
+ORG-0136,Innovate UK,United Kingdom,Swindon,1959,government_body,services,51-200,n/a
+ORG-0137,OQC,,,,company,hardware,51-200,series_a
+ORG-0138,Peptone,United Kingdom,London,2016,company,software,11-50,series_a
+ORG-0139,Xanadu,,,,company,hardware,201-500,series_c
+ORG-0140,BosonQ Psi,United States,Buffalo,2020,company,software,11-50,seed
+ORG-0141,IQM,,,,company,hardware,201-500,series_a
+ORG-0142,Lockheed Martin,United States,Bethesda,1912,investor,services,1000+,n/a
+ORG-0143,ORCA Computing,United Kingdom,London,2019,company,hardware,51-200,series_a
+ORG-0144,Qrypt,,,,company,software,51-200,series_a
+ORG-0145,ETH Zurich,Switzerland,Zurich,1855,research_institute,hardware,1000+,n/a
+ORG-0146,A Ventures,South Korea,Seoul,2018,investor,services,1-10,n/a
+ORG-0147,Quantinuum,United States,Broomfield,2021,company,hardware,501-1000,public
+ORG-0148,Vy Capital,,,,investor,services,11-50,n/a
+ORG-0149,Fermilab,United States,Batavia,1967,research_institute,hardware,1000+,n/a
+ORG-0150,In-Q-Tel,United States,Arlington,1999,investor,services,51-200,n/a
+ORG-0151,Euro-Q-Exa,Germany,Munich,2023,consortium,hardware,1-10,n/a
+ORG-0152,SpeQtral,Singapore,Singapore,2017,company,networking,11-50,series_a
+ORG-0153,AGORANOV,France,Paris,2000,investor,services,11-50,n/a
+ORG-0154,KETS Quantum Security,United Kingdom,Bristol,2016,company,networking,51-200,seed
+ORG-0155,PsiQuantum,United States,Palo Alto,2016,company,hardware,501-1000,series_c
+ORG-0156,European Innovation Council,Belgium,Brussels,1957,government_body,services,501-1000,n/a
+ORG-0157,AOSense,United States,Sunnyvale,2004,company,sensing,11-50,series_a
+ORG-0158,Nanosys,United States,Milpitas,2001,company,materials,51-200,series_b
+ORG-0159,Elaia,France,Paris,2002,investor,services,11-50,n/a
+ORG-0160,QuSpin Inc.,United States,Louisville,2013,company,sensing,11-50,series_a
+ORG-0161,MIT,United States,Cambridge,1861,research_institute,hardware,1000+,n/a
+ORG-0162,QuEra,,,,company,hardware,1-10,seed
+ORG-0163,QEYnet,Canada,Toronto,2016,company,networking,1-10,seed
+ORG-0164,Cerca Magnetics,United Kingdom,Nottingham,2020,company,sensing,11-50,series_a
+ORG-0165,Fraunhofer Society,Germany,Munich,1949,research_institute,sensing,1000+,n/a
+ORG-0166,Seraphim Space,United Kingdom,London,2006,investor,services,11-50,n/a
+ORG-0167,SeeQC,United States,Elmsford,2019,company,hardware,51-200,series_a
+ORG-0168,CNRS,France,Paris,1939,research_institute,materials,1000+,n/a
+ORG-0169,Nanoco Group,United Kingdom,Manchester,2009,company,materials,11-50,public
+ORG-0170,Oxford Quantum Circuits,,,,company,hardware,201-500,series_c
+ORG-0171,Inventure,Finland,Helsinki,2005,investor,services,11-50,n/a
+ORG-0172,USTC,China,Hefei,1958,research_institute,networking,1000+,n/a
+ORG-0173,Vector Atomic,United States,Pleasanton,2018,company,sensing,51-200,series_b
+ORG-0174,Quantonation,France,Paris,2018,investor,services,1-10,n/a
+ORG-0175,JP Morgan Chase,United States,New York,2000,investor,services,1000+,n/a
+ORG-0176,Quantum Circuits,United States,New Haven,2015,company,hardware,51-200,series_b
+ORG-0177,Korea Investment Partners,South Korea,Seoul,1986,investor,services,51-200,n/a
+ORG-0178,Post-Quantum,,,,company,software,11-50,series_a
+ORG-0179,NVIDIA,United States,Santa Clara,1993,company,hardware,1000+,public
+ORG-0180,KEEQuant,Germany,Fürth,2020,company,networking,11-50,series_b
+ORG-0181,QpiAI,India,Bangalore,2019,company,hardware,51-200,series_a
+ORG-0182,University of Waterloo IQC,Canada,Waterloo,2002,research_institute,hardware,201-500,n/a
+ORG-0183,Multiverse Computing,Spain,Donostia-san Sebastián,2019,company,software,51-200,series_b
+ORG-0184,IonQ,United States,College Park,2015,company,hardware,201-500,public
+ORG-0185,Silicon Quantum Computing,Australia,Sydney,2017,company,hardware,51-200,series_b
+ORG-0186,Quantum Computing Inc,United States,Hoboken,2018,company,hardware,11-50,public
+ORG-0187,Anello Photonics,United States,Santa Clara,2018,company,sensing,11-50,series_b
+ORG-0188,Arqit,,,,company,networking,51-200,public
+ORG-0189,Menten AI,United States,San Francisco,2018,company,software,1-10,seed
+ORG-0190,Quantum Motion,United Kingdom,London,2017,company,hardware,51-200,series_c
+ORG-0191,Quantopticon,United Kingdom,Bath,2018,company,software,1-10,seed
+ORG-0192,Qubitekk,United States,Vista,2012,company,networking,11-50,seed
+ORG-0193,QuTech (TU Delft),,,,research_institute,hardware,201-500,n/a

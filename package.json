@@ -1,0 +1,33 @@
+{
+  "name": "graph-intelligence",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "imports": {
+    "#app/*": "./src/app/*/index.ts",
+    "#pages/*": "./src/pages/*/index.ts",
+    "#widgets/*": "./src/widgets/*/index.ts",
+    "#features/*": "./src/features/*/index.ts",
+    "#entities/*": "./src/entities/*/index.ts",
+    "#shared/*": "./src/shared/*/index.ts"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build"
+  },
+  "dependencies": {
+    "graphology": "0.26.0",
+    "graphology-communities-louvain": "2.0.2",
+    "graphology-components": "1.5.4",
+    "graphology-layout-forceatlas2": "0.10.1",
+    "graphology-metrics": "2.4.2",
+    "sigma": "3.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.4",
+    "graphology-types": "^0.24.8",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.1",
+    "vite-plugin-singlefile": "^2.3.3"
+  }
+}
