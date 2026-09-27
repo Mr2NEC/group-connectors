@@ -6,3 +6,5 @@ export { NetworkSchema } from "./model/NetworkSchema";
 export { Organisation } from "./model/Organisation";
 export type { OrganisationAttrs } from "./model/Organisation";
 export { Link, Relationship } from "./model/Link";
+export { NodeLink } from "./ui/NodeLink";
+export { RelationshipText } from "./ui/RelationshipText";

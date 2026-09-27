@@ -1,0 +1,6 @@
+.graph-canvas { position: absolute; inset: 0; }
+.graph-canvas__graph { position: absolute; inset: 0; }
+.graph-canvas__tools { position: absolute; top: 12px; right: 12px; display: flex; gap: 6px; }
+.graph-canvas__tools button {
+  padding: 6px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); font: inherit; font-size: 13px; cursor: pointer;
+}

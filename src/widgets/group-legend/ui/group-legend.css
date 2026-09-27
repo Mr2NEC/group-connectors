@@ -1,0 +1,9 @@
+.group-legend { padding: 14px 20px; border-top: 1px solid var(--line); }
+.group-legend__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.group-legend__list button {
+  width: 100%; display: flex; gap: 8px; align-items: baseline; padding: 5px 6px; border: 0; border-radius: 6px;
+  background: transparent; font: inherit; font-size: 12.5px; cursor: pointer; text-align: left;
+}
+.group-legend__list button:hover, .group-legend__list button[aria-pressed="true"] { background: var(--chip); }
+.group-legend__list .size { margin-left: auto; color: var(--muted); font-variant-numeric: tabular-nums; }
+.group-legend__list .profile { color: var(--muted); }

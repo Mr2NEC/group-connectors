@@ -1,0 +1,20 @@
+.graph-explorer { display: flex; height: 100%; }
+
+.graph-explorer__sidebar {
+  width: 420px; flex: none; height: 100%; overflow-y: auto;
+  background: var(--panel); border-right: 1px solid var(--line);
+  display: flex; flex-direction: column;
+}
+.graph-explorer__header { padding: 18px 20px 6px; }
+.graph-explorer__header h1 { margin: 0; font-size: 18px; line-height: 1.3; }
+
+.graph-explorer__controls { padding: 8px 20px 12px; display: grid; gap: 10px; border-bottom: 1px solid var(--line); }
+.graph-explorer__controls > [data-slot] { display: contents; }
+
+.graph-explorer__stage { flex: 1; position: relative; min-width: 0; }
+
+@media (max-width: 800px) {
+  .graph-explorer { flex-direction: column-reverse; }
+  .graph-explorer__sidebar { width: 100%; height: 50%; border-right: 0; border-top: 1px solid var(--line); }
+  .graph-explorer__stage { height: 50%; flex: none; }
+}
