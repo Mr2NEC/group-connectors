@@ -7,9 +7,11 @@ import { NodeFocus } from "#features/focus-node";
 import { GroupSelector } from "#features/select-group";
 import { GraphTheme } from "#shared/config";
 import { Component } from "#shared/ui";
+import { measureGroups } from "../model/GroupGeometry";
 import { Highlighter, type Highlight } from "../model/Highlighter";
 import { NodeMotion } from "../model/NodeMotion";
 import { ViewStyler } from "../model/ViewStyler";
+import { GroupLayer } from "./GroupLayer";
 import "./graph-canvas.css";
 
 export interface GraphCanvasDeps {
@@ -63,12 +65,15 @@ export class GraphCanvas extends Component {
       labelWeight: "500",
       labelColor: { color: GraphTheme.label },
       labelRenderedSizeThreshold: 9,
+      stagePadding: 60,
       minCameraRatio: 0.08,
       maxCameraRatio: 3,
       nodeReducer: (node, data) => this.#reduceNode(node, data),
       edgeReducer: (edge, data) => this.#reduceEdge(edge, data),
     });
     this.#renderer = renderer;
+    const groupLayer = new GroupLayer(renderer);
+    renderer.on("afterRender", () => groupLayer.draw(measureGroups(s.view, this.#network.graph), this.#highlight === null));
 
     this.watch([s.viewIndex], () => {
       this.#styler.apply(s.view);
@@ -135,9 +140,15 @@ export class GraphCanvas extends Component {
       const g = this.#network.graph;
       const on = hl.edge(edge, g.source(edge), g.target(edge));
       Object.assign(res, on ? { color: GraphTheme.edgeHighlight, zIndex: 1 } : { color: GraphTheme.edgeDim, zIndex: 0 });
-    } else {
-      res.color = data.cross ? GraphTheme.edgeCross : GraphTheme.edge;
+      return res;
     }
+    const g = this.#network.graph;
+    const hovered = this.#session.hoveredNode.value;
+    if (hovered && (g.source(edge) === hovered || g.target(edge) === hovered)) {
+      return { ...res, color: GraphTheme.edgeHighlight, zIndex: 1 };
+    }
+    if (data.cross) return { ...res, hidden: true };
+    res.color = GraphTheme.edge;
     return res;
   }
 

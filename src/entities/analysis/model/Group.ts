@@ -6,6 +6,7 @@ export class Group {
     readonly members: string[],
     readonly name: string,
     readonly profile: string,
+    readonly isolated = false,
   ) {}
 
   get size(): number {
@@ -13,6 +14,7 @@ export class Group {
   }
 
   get color(): string {
+    if (this.isolated) return GraphTheme.isolatedGroup;
     return GraphTheme.groupPalette[this.id] ?? GraphTheme.groupFallback;
   }
 }

@@ -5,6 +5,7 @@ import { NodeFocus } from "#features/focus-node";
 import { SearchBox } from "#features/search-node";
 import { AnswerButton } from "#features/show-answer";
 import { ViewToggle } from "#features/toggle-view";
+import { DataNotes } from "#widgets/data-notes";
 import { GraphCanvas } from "#widgets/graph-canvas";
 import { GroupLegend } from "#widgets/group-legend";
 import { InsightPanel } from "#widgets/insight-panel";
@@ -46,6 +47,7 @@ export class GraphExplorerPage extends Component {
         </div>
         <section data-slot="insight-panel"></section>
         <section data-slot="group-legend"></section>
+        <footer data-slot="data-notes"></footer>
       </aside>
       <main class="graph-explorer__stage"><div data-slot="graph-canvas"></div></main>`;
 
@@ -58,6 +60,7 @@ export class GraphExplorerPage extends Component {
       new SearchBox(slot("search"), network, { onPick: (id) => focus.focus(id) }),
       new InsightPanel(slot("insight-panel"), this.#deps),
       new GroupLegend(slot("group-legend"), this.#deps),
+      new DataNotes(slot("data-notes"), this.#deps),
       this.#canvas,
     ];
     this.#children.forEach((c) => c.mount());

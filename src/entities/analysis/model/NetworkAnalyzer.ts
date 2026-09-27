@@ -2,6 +2,7 @@ import { UndirectedGraph } from "graphology";
 import louvain from "graphology-communities-louvain";
 import betweennessCentrality from "graphology-metrics/centrality/betweenness.js";
 import type { AnalysisConfig, ViewConfig } from "#shared/api";
+import { ISOLATED_GROUP_NAME } from "#shared/config";
 import { GraphTopology, SeededRandom } from "#shared/lib";
 import type { AnalyzableNetwork } from "./AnalyzableNetwork";
 import { AnalysisView, type GroupPair, type NodeMetric, type ViewGraph } from "./AnalysisView";
@@ -84,6 +85,13 @@ export class NetworkAnalyzer {
       .filter((o) => !g.hasNode(o.id))
       .map((o) => o.id)
       .sort(this.#byLabel);
+    if (isolated.length) {
+      const group = new Group(groups.length, isolated, ISOLATED_GROUP_NAME, "", true);
+      groups.push(group);
+      for (const id of isolated) {
+        metrics.set(id, { group: group.id, degree: 0, groupsTouched: 1, pairs: [], bridgeScore: 0, cutOff: [], betweenness: 0 });
+      }
+    }
 
     return new AnalysisView({
       config,

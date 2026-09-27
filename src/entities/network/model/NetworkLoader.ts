@@ -58,7 +58,7 @@ export class NetworkLoader {
     const describe = (s: string, t: string, type: string, directed: boolean, year: string | null) =>
       [`${labelOf(s)} ${directed ? "→" : "–"} ${labelOf(t)}`, schema.relationshipLabel(type), year].filter(Boolean).join(" · ");
     const links = new Map<string, Link>();
-    const seen = new Set<string>();
+    const kept = new Map<string, Relationship>();
 
     for (const row of this.#rows(cfg.file)) {
       const s = column(row, cfg.source);
@@ -76,18 +76,21 @@ export class NetworkLoader {
       }
       const ends = directed ? [s, t] : [s, t].sort();
       const key = [type, year, ...ends].join("|");
-      if (seen.has(key)) {
+      const original = kept.get(key);
+      if (original) {
+        original.addCopy();
         report(LoadIssue.duplicate, describe(s, t, type, directed, year));
         continue;
       }
-      seen.add(key);
 
       const [a, b] = s < t ? [s, t] : [t, s];
       const pair = `${a}|${b}`;
       const link = links.get(pair) ?? new Link(a, b);
       links.set(pair, link);
       const weight = column(row, cfg.weight) ? Number.parseFloat(column(row, cfg.weight)) : 1;
-      link.add(new Relationship(type, s, t, directed, year ? Number.parseInt(year, 10) : null, weight));
+      const relationship = new Relationship(type, s, t, directed, year ? Number.parseInt(year, 10) : null, weight);
+      kept.set(key, relationship);
+      link.add(relationship);
     }
     return { links: [...links.values()], issues };
   }

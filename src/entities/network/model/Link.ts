@@ -1,4 +1,6 @@
 export class Relationship {
+  #copies = 1;
+
   constructor(
     readonly type: string,
     readonly from: string,
@@ -7,6 +9,14 @@ export class Relationship {
     readonly year: number | null,
     readonly weight: number,
   ) {}
+
+  get copies(): number {
+    return this.#copies;
+  }
+
+  addCopy(): void {
+    this.#copies++;
+  }
 }
 
 export class Link {

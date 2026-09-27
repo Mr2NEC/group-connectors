@@ -1,0 +1,4 @@
+.rel-copies {
+  display: inline-block; margin-left: 4px; padding: 0 5px; border-radius: 999px; font-size: 11px; line-height: 16px;
+  background: var(--warn-bg); border: 1px solid var(--warn-line); color: #8a5a00; cursor: help;
+}
