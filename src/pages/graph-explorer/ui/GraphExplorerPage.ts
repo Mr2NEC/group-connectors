@@ -1,7 +1,10 @@
 import type { AnalysisView } from "#entities/analysis";
 import type { Network } from "#entities/network";
 import type { ExplorationSession } from "#entities/session";
+import { NodeFocus } from "#features/focus-node";
+import { SearchBox } from "#features/search-node";
 import { AnswerButton } from "#features/show-answer";
+import { ViewToggle } from "#features/toggle-view";
 import { GraphCanvas } from "#widgets/graph-canvas";
 import { GroupLegend } from "#widgets/group-legend";
 import { InsightPanel } from "#widgets/insight-panel";
@@ -37,7 +40,9 @@ export class GraphExplorerPage extends Component {
           <h1>${Text.escape(network.schema.title)}</h1>
         </header>
         <div class="graph-explorer__controls">
+          <div data-slot="view-toggle"></div>
           <div data-slot="answer-button"></div>
+          <div data-slot="search"></div>
         </div>
         <section data-slot="insight-panel"></section>
         <section data-slot="group-legend"></section>
@@ -45,9 +50,12 @@ export class GraphExplorerPage extends Component {
       <main class="graph-explorer__stage"><div data-slot="graph-canvas"></div></main>`;
 
     const slot = (name: string) => this.query(`[data-slot="${name}"]`);
+    const focus = new NodeFocus(session);
     this.#canvas = new GraphCanvas(slot("graph-canvas"), this.#deps);
     this.#children = [
+      new ViewToggle(slot("view-toggle"), session),
       new AnswerButton(slot("answer-button"), session),
+      new SearchBox(slot("search"), network, { onPick: (id) => focus.focus(id) }),
       new InsightPanel(slot("insight-panel"), this.#deps),
       new GroupLegend(slot("group-legend"), this.#deps),
       this.#canvas,

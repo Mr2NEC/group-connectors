@@ -1,0 +1,6 @@
+.segmented { display: flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.segmented button {
+  flex: 1; padding: 7px 8px; border: 0; background: transparent; font: inherit; font-size: 13px; cursor: pointer; color: var(--muted);
+}
+.segmented button + button { border-left: 1px solid var(--line); }
+.segmented button[aria-checked="true"] { background: var(--ink); color: #fff; }

@@ -8,6 +8,7 @@ import { GroupSelector } from "#features/select-group";
 import { GraphTheme } from "#shared/config";
 import { Component } from "#shared/ui";
 import { Highlighter, type Highlight } from "../model/Highlighter";
+import { NodeMotion } from "../model/NodeMotion";
 import { ViewStyler } from "../model/ViewStyler";
 import "./graph-canvas.css";
 
@@ -25,6 +26,7 @@ export class GraphCanvas extends Component {
   readonly #highlighter: Highlighter;
   readonly #focus: NodeFocus;
   readonly #groups: GroupSelector;
+  readonly #motion: NodeMotion;
   #highlight: Highlight | null = null;
   #renderer?: Renderer;
 
@@ -36,6 +38,7 @@ export class GraphCanvas extends Component {
     this.#highlighter = new Highlighter(network.graph);
     this.#focus = new NodeFocus(session);
     this.#groups = new GroupSelector(session);
+    this.#motion = new NodeMotion(network);
   }
 
   get renderer(): Renderer | undefined {
@@ -52,7 +55,7 @@ export class GraphCanvas extends Component {
       </div>`;
 
     this.#styler.apply(s.view);
-    this.#network.placeNodes(s.view.positions);
+    this.#motion.place(s.view);
     const renderer: Renderer = new Sigma(this.#network.graph, this.query(".graph-canvas__graph"), {
       zIndex: true,
       labelFont: GraphTheme.font,
@@ -69,8 +72,9 @@ export class GraphCanvas extends Component {
 
     this.watch([s.viewIndex], () => {
       this.#styler.apply(s.view);
-      this.#network.placeNodes(s.view.positions);
+      this.#motion.animate(s.view);
       this.render();
+      void renderer.getCamera().animatedReset();
     });
     this.watch<unknown>([s.focusedNode, s.selectedGroup, s.answerMode]);
     this.watch([s.hoveredNode], () => renderer.refresh());
@@ -100,6 +104,7 @@ export class GraphCanvas extends Component {
 
   override destroy(): void {
     super.destroy();
+    this.#motion.stop();
     this.#renderer?.kill();
   }
 
