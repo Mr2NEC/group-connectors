@@ -11,7 +11,10 @@ import { GroupLegend } from "#widgets/group-legend";
 import { InsightPanel } from "#widgets/insight-panel";
 import { Text } from "#shared/lib";
 import { Component } from "#shared/ui";
+import { SidebarState } from "../model/SidebarState";
 import "./graph-explorer-page.css";
+
+const SIDEBAR_ICON = `<svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="14" height="12" rx="2"/><path d="M7 3v12"/></svg>`;
 
 export interface GraphExplorerDeps {
   network: Network;
@@ -22,6 +25,7 @@ export class GraphExplorerPage extends Component {
   readonly #deps: GraphExplorerDeps;
   #children: Component[] = [];
   #canvas?: GraphCanvas;
+  readonly #sidebar = new SidebarState();
 
   constructor(root: HTMLElement, deps: GraphExplorerDeps) {
     super(root);
@@ -36,7 +40,7 @@ export class GraphExplorerPage extends Component {
     const { network, session } = this.#deps;
     this.root.classList.add("graph-explorer");
     this.root.innerHTML = `
-      <aside class="graph-explorer__sidebar">
+      <aside class="graph-explorer__sidebar" id="graph-explorer-sidebar">
         <header class="graph-explorer__header">
           <h1>${Text.escape(network.schema.title)}</h1>
         </header>
@@ -49,7 +53,10 @@ export class GraphExplorerPage extends Component {
         <section data-slot="group-legend"></section>
         <footer data-slot="data-notes"></footer>
       </aside>
-      <main class="graph-explorer__stage"><div data-slot="graph-canvas"></div></main>`;
+      <main class="graph-explorer__stage">
+        <div data-slot="graph-canvas"></div>
+        <button type="button" class="graph-explorer__sidebar-toggle" aria-controls="graph-explorer-sidebar">${SIDEBAR_ICON}</button>
+      </main>`;
 
     const slot = (name: string) => this.query(`[data-slot="${name}"]`);
     const focus = new NodeFocus(session);
@@ -66,8 +73,22 @@ export class GraphExplorerPage extends Component {
     this.#children.forEach((c) => c.mount());
 
     const sidebar = this.query(".graph-explorer__sidebar");
+    const toggle = this.query<HTMLButtonElement>(".graph-explorer__sidebar-toggle");
+    const applySidebar = (open: boolean) => {
+      this.root.classList.toggle("graph-explorer--sidebar-hidden", !open);
+      sidebar.inert = !open;
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.title = open ? "Hide sidebar" : "Show sidebar";
+      toggle.setAttribute("aria-label", toggle.title);
+    };
+    this.listen("click", () => this.#sidebar.toggle(), toggle);
+    this.watch([this.#sidebar.open], applySidebar);
+    applySidebar(this.#sidebar.open.value);
+
     this.watch([session.focusedNode], (id) => {
-      if (id) sidebar.scrollTop = 0;
+      if (!id) return;
+      this.#sidebar.show();
+      sidebar.scrollTop = 0;
     });
     return super.mount();
   }

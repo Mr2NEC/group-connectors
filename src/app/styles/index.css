@@ -14,7 +14,7 @@
 }
 
 * { box-sizing: border-box; }
-html, body, #root { margin: 0; height: 100%; }
+html, body, #root { margin: 0; height: 100%; overflow: hidden; }
 body { background: var(--bg); }
 
 h2 { font-size: 13px; margin: 0 0 8px; }

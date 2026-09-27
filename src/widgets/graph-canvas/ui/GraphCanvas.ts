@@ -31,6 +31,7 @@ export class GraphCanvas extends Component {
   readonly #motion: NodeMotion;
   #highlight: Highlight | null = null;
   #renderer?: Renderer;
+  #resizeObserver?: ResizeObserver;
 
   constructor(root: HTMLElement, { network, session }: GraphCanvasDeps) {
     super(root);
@@ -74,6 +75,11 @@ export class GraphCanvas extends Component {
     this.#renderer = renderer;
     const groupLayer = new GroupLayer(renderer);
     renderer.on("afterRender", () => groupLayer.draw(measureGroups(s.view, this.#network.graph), this.#highlight === null));
+    this.#resizeObserver = new ResizeObserver(() => {
+      renderer.resize(true);
+      renderer.refresh();
+    });
+    this.#resizeObserver.observe(this.query(".graph-canvas__graph"));
 
     this.watch([s.viewIndex], () => {
       this.#styler.apply(s.view);
@@ -110,6 +116,7 @@ export class GraphCanvas extends Component {
   override destroy(): void {
     super.destroy();
     this.#motion.stop();
+    this.#resizeObserver?.disconnect();
     this.#renderer?.kill();
   }
 
