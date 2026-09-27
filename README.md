@@ -4,15 +4,15 @@
 
 ## Run it
 
-Just open `dist/index.html` in a browser (double-click is enough: no server, no internet needed; JS, CSS, the CSVs and `schema.json` are all inlined into that one file).
-
-To work on it (Node 22.12+):
+Node 22.12+:
 
 ```bash
 npm install
 npm run dev        # dev server with hot reload
 npm run build      # tsc --noEmit (strict) + dist/index.html (single self-contained file)
 ```
+
+The built `dist/index.html` opens with a double-click: no server, no internet needed; JS, CSS, the CSVs and `schema.json` are all inlined into that one file.
 
 How an analyst uses it: press **Show who connects the groups**. Read the ranked list. Click a name to see which groups it links and what falls apart without it. Flip **Ignore investments** to see only operational ties.
 
